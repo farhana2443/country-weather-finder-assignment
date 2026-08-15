@@ -1,10 +1,50 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> MIS455 </title>
+    <link rel="stylesheet" href="weather.css">
 </head>
 <body>
-    
+    <nav id="navbar">
+        <div class="navTitle">🌍 Country & Weather Finder</div>
+
+        <div class="navLinks">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+        </div>
+    </nav>
+
+    <div id="top"> 
+
+    </div>
+
+    <h2>Search Any Country</h2>
+
+    <p> Enter a country name below to see its flag, capital, population, region and more. Then click "More  
+        Details" on any card to check the current weather in its capital. </p>
+
+    Enter Country Name: <br>
+
+    <input id="countryInput" type="text"> <br>
+    <button onclick="connect()">Search Country</button> <br><br>
+
+    <div id="statusArea">
+
+    </div>
+
+    <div id="displayArea">
+
+    </div>
+
+    <footer id="footer">
+        <p>MIS455 Final Assignment 2026</p>
+        <p>Data Source: REST Countries and Open-Meteo API</p>
+        
+    </footer>
+
+    <script src="weather.js"></script>
+
 </body>
 </html>
