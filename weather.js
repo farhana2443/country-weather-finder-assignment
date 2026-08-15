@@ -19,9 +19,9 @@ function connect() {
         })
         .then(res => res.json())
         .then(data => {
-
-            // Learned from docs — v5 sends "errors" array when nothing matches
-            if (data.errors) {
+            // I learned this from the REST Countries API documentation.
+            // I check the response before displaying the country data.
+            if (data.errors|| !data.data || !data.data.objects || data.data.objects.length == 0) {
                 statusArea.innerHTML = "Country not found. Please check the spelling.";
             }
             else {
@@ -102,7 +102,7 @@ function displayWeather(data, index) {
                          Wind Direction: ${current.winddirection} degrees`;
 
     newDiv.classList.add("weatherBox");
-    
+
 
     weatherArea.textContent ="";
     weatherArea.appendChild(newDiv);
