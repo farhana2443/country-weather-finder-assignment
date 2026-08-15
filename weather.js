@@ -24,6 +24,7 @@ function connect() {
             // I check the response before displaying the country data.
             if (data.errors|| !data.data || !data.data.objects || data.data.objects.length == 0) {
                 statusArea.innerHTML = "Country not found. Please check the spelling.";
+                document.getElementById("displayArea").textContent = "";
             }
             else {
                 // I used data.data.objects because the country results are stored inside this nested array.
