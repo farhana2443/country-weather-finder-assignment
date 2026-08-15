@@ -11,7 +11,8 @@ function connect() {
     else {
         var url = `https://api.restcountries.com/countries/v5/names.common/${search}`;
 
-        // Learned from restcountries.com docs — API key required in every request now
+        // I learned this from the REST Countries API documentation.
+        // I used the Authorization header because the API requires an API key for the request.
         fetch(url, {
             headers: {
                 "Authorization": "Bearer rc_live_4ba239aaeeb54b94a9aa684b033c9721"
@@ -35,8 +36,10 @@ function connect() {
 }
 
 function display(data) {
+    var statusArea = document.getElementById("statusArea");
     var oldContent = document.getElementById("displayArea");
 
+    statusArea.innerHTML = "";
     oldContent.textContent = "";
     lastCountryData = data;
 
